@@ -24,7 +24,7 @@
     "url": "https://github.com/IamLizu"
   },
   "license": "MIT",
-  "packageManager": "pnpm@11.7.0",
+  "packageManager": "pnpm@10.34.5",
   "type": "module",
   "sideEffects": false,
   "main": "./dist/cjs/index.js",
