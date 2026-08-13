@@ -1,6 +1,6 @@
 {
   "name": "quecord",
-  "version": "0.1.0",
+  "version": "0.1.0-beta.0",
   "description": "A MongoDB-native durable work queue where your record is the job",
   "keywords": [
     "mongodb",
