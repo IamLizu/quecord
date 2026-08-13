@@ -1,0 +1,67 @@
+{
+  "name": "quecord",
+  "version": "0.1.0",
+  "description": "A MongoDB-native durable work queue where your record is the job",
+  "keywords": [
+    "mongodb",
+    "queue",
+    "job-queue",
+    "worker",
+    "durable",
+    "typescript"
+  ],
+  "homepage": "https://github.com/IamLizu/quecord#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamLizu/quecord.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IamLizu/quecord/issues"
+  },
+  "author": {
+    "name": "IamLizu",
+    "email": "hasan@smmh.xyz",
+    "url": "https://github.com/IamLizu"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@11.7.0",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && tsc -p tsconfig.cjs.json && node scripts/write-cjs-package.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsx --test test/**/*.test.ts",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run typecheck && npm test"
+  },
+  "peerDependencies": {
+    "mongodb": ">=6 <8"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "mongodb": "^7.5.0",
+    "tsx": "^4.23.2",
+    "typescript": "^5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
