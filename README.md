@@ -1,5 +1,10 @@
 # Quecord
 
+[![npm version](https://img.shields.io/npm/v/quecord.svg)](https://www.npmjs.com/package/quecord)
+[![CI](https://github.com/IamLizu/quecord/actions/workflows/ci.yml/badge.svg)](https://github.com/IamLizu/quecord/actions/workflows/ci.yml)
+[![Node.js](https://img.shields.io/node/v/quecord.svg)](https://www.npmjs.com/package/quecord)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 **Your record is the job.**
 
 Quecord is a small MongoDB-native durable work queue for Node.js. It claims and
